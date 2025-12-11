@@ -1,0 +1,158 @@
+/* --- Estilos Base y Tipografía --- */
+body {
+    /* Mantenemos el color de fondo base (el azul oscuro original) */
+    background-color: #1a365b; 
+    color: white;
+    /* Aplicar Poppins a todo el cuerpo */
+    font-family: 'Poppins', sans-serif; 
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* Textos Principales: Bold o Black (900) */
+.header-text h1, 
+.header-text h2, 
+.time-value {
+    /* Usaremos 900 para el máximo impacto (Bold) */
+    font-weight: 900; 
+}
+
+/* Textos Secundarios: Regular (400) */
+.header-text p, 
+.time-label, 
+.event-date, 
+.sponsor-logos .sponsor {
+    font-weight: 400;
+}
+
+/* Ajuste de tamaño para los títulos */
+.header-text h1 {
+    font-size: 3em; 
+    line-height: 1.1;
+    margin-bottom: 0.1em;
+}
+
+.header-text h2 {
+    font-size: 2.2em;
+    margin-top: 1em;
+}
+
+.header-text p {
+    font-size: 1em;
+    margin: 0.1em 0;
+}
+
+.landing-container {
+    /* **CAMBIO CRÍTICO:** Ocupar el 100% del ancho y alto en desktop */
+    width: 100%;
+    max-width: none; /* Quitamos la restricción de 450px */
+    min-height: 100vh; /* Ocupar toda la altura */
+    
+    position: relative;
+    overflow: hidden; 
+    
+    /* Configuración de la Imagen de Fondo del Piano */
+    background-image: url('img/bg-piano.jpg'); 
+    background-size: cover; 
+    background-position: center bottom; 
+    background-repeat: no-repeat;
+}
+
+/* Overlay Negro con Transparencia */
+.landing-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Negro con una opacidad del 30% (ajustar el valor 0.3 según prefieras) */
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 1; 
+}
+
+/* Asegurar que el contenido esté sobre el overlay y que se mantenga centrado/legible */
+.header-text, .main-content, .footer-info {
+    position: relative;
+    z-index: 2; 
+    /* En desktop, podemos centrar el contenido en un área más pequeña para mantener la proporción de lectura */
+    max-width: 450px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timer-segment {
+    /* Ajustes visuales de la caja negra */
+    background-color: black;
+    /* ... otros estilos ... */
+}
+
+.time-value {
+    font-size: 3em; /* Ajuste de tamaño */
+    font-weight: 900; /* Poppins Black */
+    line-height: 1;
+}
+
+.time-label {
+    font-size: 0.9em;
+    font-weight: 400; /* Poppins Regular */
+    margin-top: 5px;
+}
+
+/* --- Contenedor Global del Contador --- */
+.countdown-timer {
+    /* **SOLUCIÓN CRÍTICA: display: flex;** */
+    display: flex;
+    
+    /* Alinea las tres cajas negras al centro */
+    justify-content: center; 
+    
+    /* Espacio entre las cajas */
+    gap: 15px; /* Puedes ajustar este valor */
+    
+    /* Márgenes */
+    margin-bottom: 80px;
+    margin-top: 50px;
+}
+
+/* --- Cada Segmento Individual (La Caja Negra) --- */
+.timer-segment {
+    background-color: black;
+    color: white;
+    padding: 5px 8px;
+    border: 2px solid white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+}
+
+/* --- Estilos de Texto --- */
+.time-value {
+    font-size: 3em; 
+    font-weight: 900; /* Poppins Black */
+    line-height: 1;
+}
+
+.time-label {
+    font-size: 0.9em;
+    font-weight: 400; /* Poppins Regular */
+    margin-top: 5px;
+}
+
+.sponsor-logos {
+    gap: 15px;
+    padding-top:30px;
+flex-direction: row;
+    display: inline-flex;
+    img {
+    max-width: 110px;
+    }
+}
