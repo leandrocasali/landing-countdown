@@ -14,12 +14,16 @@ body {
     text-align: center;
 }
 
+b {
+    color:#33CCCC;
+}
+
 /* Textos Principales: Bold o Black (900) */
 .header-text h1, 
 .header-text h2, 
 .time-value {
     /* Usaremos 900 para el máximo impacto (Bold) */
-    font-weight: 900; 
+    font-weight: 700; 
 }
 
 /* Textos Secundarios: Regular (400) */
@@ -84,6 +88,7 @@ body {
     max-width: 450px; 
     margin-left: auto;
     margin-right: auto;
+    padding:10px 35px;
 }
 
 .timer-segment {
@@ -156,3 +161,9 @@ flex-direction: row;
     max-width: 110px;
     }
 }
+
+.premio {
+    background-color: rgb(52 204 205 / 55%);
+    border-radius: 10px;
+    padding: 15px 25px;
+    }
