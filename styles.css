@@ -159,6 +159,7 @@ flex-direction: row;
     display: inline-flex;
     img {
     max-width: 110px;
+    width: 100%;
     }
 }
 
